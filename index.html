@@ -13,7 +13,6 @@
       margin: 0;
       padding: 0;
       line-height: 1.8;
-      overflow-x: hidden;
     }
     header, section {
       padding: 2em 1em;
@@ -42,13 +41,6 @@
     }
     .topic {
       margin-bottom: 3em;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .topic.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
     .media {
       margin-top: 1em;
@@ -58,49 +50,12 @@
       border-radius: 8px;
       margin-top: 1em;
     }
-    .references {
-      font-size: 0.95em;
-      background: #f0f0f0;
-      padding: 1em;
-      border-left: 4px solid #c19a6b;
-      margin-top: 1em;
-    }
-    .references a {
-      color: #336699;
-      text-decoration: none;
-      position: relative;
-    }
-    .references a:hover::after {
-      content: attr(data-desc);
-      position: absolute;
-      top: 1.5em;
-      left: 0;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 0.5em;
-      width: 300px;
-      font-size: 0.85em;
-      color: #333;
-      z-index: 10;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
     footer {
       background-color: #222;
       color: #ccc;
       text-align: center;
       padding: 2em 1em;
       font-size: 0.9em;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-      header p {
-        font-size: 1em;
-      }
-      .references a:hover::after {
-        width: 90vw;
-      }
     }
   </style>
 </head>
@@ -110,29 +65,75 @@
     <p>没入型アートで巡るサウジアラビアの歴史と美</p>
   </header>
 
-  <section id="content">
-    <!-- 各セクションの内容はこれまでのコードに準拠し、自動でフェードイン対応 -->
+  <section>
+    <h2>1. 香料の道とアルウラ</h2>
+    <div class="topic">
+      <p>古代交易路の夜を再現。360度映像、香り、音の中でキャラバンに参加する体験。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?camel,desert" alt="アルウラのキャラバン風景">
+        <iframe src="https://www.youtube.com/embed/KNfKdr1N0z8" title="AlUla Heritage Experience" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <h2>2. ディリーヤ - サウジ統一の物語</h2>
+    <div class="topic">
+      <p>泥壁の街を歩き、ホログラムの語り部と共に建国の瞬間を追体験。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?saudi,architecture" alt="ディリーヤの建築遺産">
+      </div>
+    </div>
+
+    <h2>3. ジェッダ旧市街</h2>
+    <div class="topic">
+      <p>巡礼と貿易の十字路を巡る。香りと音のスーク、海路からの視点を体感。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?jeddah,market" alt="ジェッダ旧市街">
+      </div>
+    </div>
+
+    <h2>4. ヒジュラの旅</h2>
+    <div class="topic">
+      <p>預言者のメッカからメディナへの旅路を、ゾーンに分かれた没入空間でたどる体験。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?medina,desert" alt="ヒジュラの旅路">
+      </div>
+    </div>
+
+    <h2>5. アルダー - サウジの剣舞</h2>
+    <div class="topic">
+      <p>鼓動のような太鼓の音と剣舞の振りで、国家の誇りを体で感じるインタラクティブ演出。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?saudi,sword" alt="アルダー剣舞">
+      </div>
+    </div>
+
+    <h2>6. アル・カット・アル・アシーリ</h2>
+    <div class="topic">
+      <p>アシール地方の女性たちによる壁画芸術を、色と形のインタラクションで体験。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?arabic,pattern" alt="アシーリ壁画">
+      </div>
+    </div>
+
+    <h2>7. マジュリスとアラビック・コーヒー</h2>
+    <div class="topic">
+      <p>焙煎の香りと共に、伝統的なもてなし文化を身体で学ぶ空間。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?arabic,coffee" alt="アラビック・コーヒーとマジュリス">
+      </div>
+    </div>
+
+    <h2>8. 砂漠の遺産：ラクダと鷹</h2>
+    <div class="topic">
+      <p>砂漠の夜空の下、ラクダとのふれあいや鷹狩りのVR体験が、自然と人のつながりを描く。</p>
+      <div class="media">
+        <img src="https://source.unsplash.com/800x500/?falcon,camel,desert" alt="砂漠のラクダと鷹">
+      </div>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Immersive Museum Saudi Arabia. All rights reserved.</p>
   </footer>
-
-  <script>
-    // スクロールに応じたフェードイン処理
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('.topic').forEach(topic => {
-      observer.observe(topic);
-    });
-  </script>
 </body>
 </html>
