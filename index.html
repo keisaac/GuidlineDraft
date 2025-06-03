@@ -1,139 +1,318 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Immersive Museum Saudi Arabia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.8;
-    }
-    header, section {
-      padding: 2em 1em;
-      max-width: 960px;
-      margin: auto;
-    }
-    header {
-      background: url('https://source.unsplash.com/1600x600/?desert,arabia') no-repeat center/cover;
-      color: white;
-      text-align: center;
-      padding: 6em 1em;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.2em;
-    }
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-    h2 {
-      border-left: 6px solid #c19a6b;
-      padding-left: 0.5em;
-      margin-top: 2em;
-      color: #444;
-    }
-    .topic {
-      margin-bottom: 3em;
-    }
-    .media {
-      margin-top: 1em;
-    }
-    .media img, .media iframe {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 1em;
-    }
-    footer {
-      background-color: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 2em 1em;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アークテリクス BIRD CLUB イベント 安全基準ガイドライン</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+            background-color: #f8f9fa;
+        }
+        .nav-link.active {
+            color: #F8733D;
+            font-weight: 600;
+        }
+        .arcteryx-orange {
+            color: #F8733D;
+        }
+        .bg-arcteryx-orange {
+            background-color: #F8733D;
+        }
+        .border-arcteryx-orange {
+            border-color: #F8733D;
+        }
+        .content-section {
+            padding-top: 80px;
+            margin-top: -80px;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Immersive Museum - サウジアラビア文化体験</h1>
-    <p>没入型アートで巡るサウジアラビアの歴史と美</p>
-  </header>
+<body class="bg-slate-50 text-slate-800">
 
-  <section>
-    <h2>1. 香料の道とアルウラ</h2>
-    <div class="topic">
-      <p>古代交易路の夜を再現。360度映像、香り、音の中でキャラバンに参加する体験。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?camel,desert" alt="アルウラのキャラバン風景">
-        <iframe src="https://www.youtube.com/embed/KNfKdr1N0z8" title="AlUla Heritage Experience" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
+    <header class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold tracking-tighter">
+                        <span class="arcteryx-orange">ARC'TERYX</span> BIRD CLUB
+                    </span>
+                    <span class="hidden sm:inline ml-4 pl-4 border-l border-slate-300 text-sm font-semibold text-slate-600">安全基準ガイドライン</span>
+                </div>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#intro" class="nav-link hover:arcteryx-orange transition-colors">はじめに</a>
+                    <a href="#mindset" class="nav-link hover:arcteryx-orange transition-colors">参加の心得</a>
+                    <a href="#gear" class="nav-link hover:arcteryx-orange transition-colors">準備と装備</a>
+                    <a href="#rules" class="nav-link hover:arcteryx-orange transition-colors">行動ルール</a>
+                    <a href="#emergency" class="nav-link hover:arcteryx-orange transition-colors">緊急時対応</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-600 hover:arcteryx-orange">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <a href="#intro" class="block py-3 px-4 text-base font-medium text-slate-600 hover:bg-slate-100 nav-link-mobile">はじめに</a>
+            <a href="#mindset" class="block py-3 px-4 text-base font-medium text-slate-600 hover:bg-slate-100 nav-link-mobile">参加の心得</a>
+            <a href="#gear" class="block py-3 px-4 text-base font-medium text-slate-600 hover:bg-slate-100 nav-link-mobile">準備と装備</a>
+            <a href="#rules" class="block py-3 px-4 text-base font-medium text-slate-600 hover:bg-slate-100 nav-link-mobile">行動ルール</a>
+            <a href="#emergency" class="block py-3 px-4 text-base font-medium text-slate-600 hover:bg-slate-100 nav-link-mobile">緊急時対応</a>
+        </div>
+    </header>
 
-    <h2>2. ディリーヤ - サウジ統一の物語</h2>
-    <div class="topic">
-      <p>泥壁の街を歩き、ホログラムの語り部と共に建国の瞬間を追体験。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?saudi,architecture" alt="ディリーヤの建築遺産">
-      </div>
-    </div>
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+        
+        <section id="intro" class="content-section mb-24">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">安全から、最高の体験は生まれる。</h1>
+                <p class="text-lg text-slate-600">
+                    本ガイドラインは、BIRD CLUB イベントに参加されるすべての方々が、多岐にわたるアウトドア活動を安全かつ楽しく体験していただくために策定されました。アウトドア環境の潜在的リスクを理解し、適切な準備と責任ある行動をとることが、素晴らしい体験の第一歩です。ご一読いただき、安全なイベント催行にご協力ください。
+                </p>
+            </div>
+        </section>
 
-    <h2>3. ジェッダ旧市街</h2>
-    <div class="topic">
-      <p>巡礼と貿易の十字路を巡る。香りと音のスーク、海路からの視点を体感。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?jeddah,market" alt="ジェッダ旧市街">
-      </div>
-    </div>
+        <section id="mindset" class="content-section mb-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-arcteryx-orange pb-3">1. 参加の心得</h2>
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="p-6 bg-white rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-2">1.1. 自己責任の原則</h3>
+                    <p class="text-slate-600">アウトドア活動は、本質的にリスクを伴います。参加者は、自身の安全に対して最終的な責任を持つことを理解し、主体的に安全確保に努めてください。</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-2">1.2. 健康管理</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600">
+                        <li>良好な健康状態での参加が原則です。睡眠不足や体調不良の場合は、参加を辞退する勇気も必要です。</li>
+                        <li>持病や健康に関して不安のある方は、必ず事前に医師に相談し、参加の可否について指示を受けてください。</li>
+                        <li>アレルギー体質の方は、事前に申告し、必要な対策を各自で行ってください。</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-2">1.3. 経験と技術の自己評価</h3>
+                    <p class="text-slate-600">イベントには様々なレベルが設定されています。ご自身の経験、体力、技術レベル（クライミング、滑走、雪上技術など）を客観的に評価し、無理のない範囲で参加するイベントを選択してください。</p>
+                </div>
+            </div>
+        </section>
 
-    <h2>4. ヒジュラの旅</h2>
-    <div class="topic">
-      <p>預言者のメッカからメディナへの旅路を、ゾーンに分かれた没入空間でたどる体験。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?medina,desert" alt="ヒジュラの旅路">
-      </div>
-    </div>
+        <section id="gear" class="content-section mb-24">
+            <h2 class="text-3xl font-bold mb-2">2. 準備と装備</h2>
+            <p class="text-slate-600 max-w-4xl mx-auto mb-8">適切な装備は安全の礎です。アクティビティに応じた装備を確実に準備し、出発前に必ず点検してください。以下は基本的なリストです。詳細は各イベントの募集要項を必ず確認してください。</p>
+            
+            <div class="sticky top-20 bg-white/80 backdrop-blur-md py-4 z-40 mb-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 px-2">
+                    <button class="gear-filter-btn active bg-arcteryx-orange text-white" data-target="common">共通必須装備</button>
+                    <button class="gear-filter-btn" data-target="climbing">クライミング</button>
+                    <button class="gear-filter-btn" data-target="hiking">ハイキング / トレラン</button>
+                    <button class="gear-filter-btn" data-target="snow">スノー</button>
+                    <button class="gear-filter-btn" data-target="recommended">推奨装備</button>
+                </div>
+            </div>
 
-    <h2>5. アルダー - サウジの剣舞</h2>
-    <div class="topic">
-      <p>鼓動のような太鼓の音と剣舞の振りで、国家の誇りを体で感じるインタラクティブ演出。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?saudi,sword" alt="アルダー剣舞">
-      </div>
-    </div>
+            <div class="max-w-4xl mx-auto">
+                <div id="common" class="gear-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                <div id="climbing" class="gear-list hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                <div id="hiking" class="gear-list hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                <div id="snow" class="gear-list hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                <div id="recommended" class="gear-list hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </div>
+        </section>
 
-    <h2>6. アル・カット・アル・アシーリ</h2>
-    <div class="topic">
-      <p>アシール地方の女性たちによる壁画芸術を、色と形のインタラクションで体験。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?arabic,pattern" alt="アシーリ壁画">
-      </div>
-    </div>
+        <section id="rules" class="content-section mb-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-arcteryx-orange pb-3">3. 行動ルール</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">イベント中の行動</h3>
+                    <ul class="space-y-4">
+                        <li class="p-4 bg-white rounded-lg shadow-sm"><strong>リーダーの指示遵守：</strong>安全確保のため、リーダーやガイドの指示・判断に必ず従ってください。</li>
+                        <li class="p-4 bg-white rounded-lg shadow-sm"><strong>チーム行動の徹底：</strong>勝手な単独行動は絶対に避け、チームの一員として行動してください。</li>
+                        <li class="p-4 bg-white rounded-lg shadow-sm"><strong>体調変化の早期報告：</strong>疲労や不調を感じたら、無理せず速やかにリーダーに申し出てください。</li>
+                        <li class="p-4 bg-white rounded-lg shadow-sm"><strong>危険箇所の認識：</strong>滑落・落石の危険がある場所、雪崩リスクのある斜面など、アクティビティ特有の危険を認識し、慎重に行動してください。</li>
+                        <li class="p-4 bg-white rounded-lg shadow-sm"><strong>天候変化への対応：</strong>山の天気は変わりやすいです。天候悪化に備え、早めに対応してください。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">自然環境への配慮 (LNT)</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> 事前の計画と準備</li>
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> 影響の少ない場所での活動</li>
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> ゴミの適切な処理（すべて持ち帰る）</li>
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> 見たものはそのままに</li>
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> 焚き火の影響を最小限に</li>
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> 野生動物への配慮</li>
+                        <li><span class="arcteryx-orange font-bold mr-2">✓</span> 他の利用者への配慮</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h2>7. マジュリスとアラビック・コーヒー</h2>
-    <div class="topic">
-      <p>焙煎の香りと共に、伝統的なもてなし文化を身体で学ぶ空間。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?arabic,coffee" alt="アラビック・コーヒーとマジュリス">
-      </div>
-    </div>
+        <section id="emergency" class="content-section mb-24">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-arcteryx-orange pb-3">4. 緊急時対応</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="p-6 bg-white rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold mb-4">事故発生時の対応フロー</h3>
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li><strong>安全確保：</strong>まず自身と周囲の安全を確保し、二次災害を防ぎます。これが最優先です。</li>
+                        <li><strong>救助要請：</strong>リーダーやガイドに速やかに報告。いない場合は大声で助けを求め、救助機関に連絡します。現在地、状況、負傷者の状態、アクティビティの種類を正確に伝えてください。</li>
+                        <li><strong>応急処置：</strong>可能な範囲で応急処置を行いますが、無理は禁物です。</li>
+                    </ol>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold mb-4">道迷い・はぐれた時の対応</h3>
+                     <p class="font-bold text-lg mb-2">STOP原則を思い出してください。</p>
+                     <ul class="list-disc list-inside space-y-1 text-slate-600">
+                        <li><span class="font-semibold">S</span>top: 立ち止まる</li>
+                        <li><span class="font-semibold">T</span>hink: 考える</li>
+                        <li><span class="font-semibold">O</span>bserve: 観察する</li>
+                        <li><span class="font-semibold">P</span>lan: 計画する</li>
+                    </ul>
+                    <p class="mt-4 text-slate-600">パニックにならず、その場に留まるのが基本です。むやみに動き回らず、自力での行動が困難な場合は安全な場所で救助を待ってください。</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center p-6 bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 rounded-r-lg max-w-5xl mx-auto">
+                <h4 class="font-bold mb-2">イベントの中止・変更について</h4>
+                <p>悪天候や雪崩リスクの高まりなど、安全上の理由によりイベント内容の変更や中止を判断する場合があります。参加者の安全を最優先した判断にご理解とご協力をお願いいたします。</p>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="text-center py-8 mt-16 border-t border-slate-200">
+        <p class="text-sm text-slate-500">&copy; Arc'teryx BIRD CLUB. All Rights Reserved.</p>
+    </footer>
 
-    <h2>8. 砂漠の遺産：ラクダと鷹</h2>
-    <div class="topic">
-      <p>砂漠の夜空の下、ラクダとのふれあいや鷹狩りのVR体験が、自然と人のつながりを描く。</p>
-      <div class="media">
-        <img src="https://source.unsplash.com/800x500/?falcon,camel,desert" alt="砂漠のラクダと鷹">
-      </div>
-    </div>
-  </section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-  <footer>
-    <p>&copy; 2025 Immersive Museum Saudi Arabia. All rights reserved.</p>
-  </footer>
+    const gearData = {
+        common: [
+            { name: 'バックパック', icon: '🎒', desc: 'アクティビティに適した容量のもの。' },
+            { name: 'レインウェア(上下)', icon: '🧥', desc: '防水透湿性に優れたもの。防風・防寒にも。' },
+            { name: 'ヘッドランプ & 予備電池', icon: '💡', desc: '日帰りでも必携。' },
+            { name: '飲料水', icon: '💧', desc: '1L以上を目安に。' },
+            { name: '行動食・非常食', icon: '🍫', desc: '高カロリーで軽量なもの。' },
+            { name: '防寒着', icon: '👕', desc: 'フリース、インサレーションなど。' },
+            { name: '帽子', icon: '🧢', desc: '日除け、防寒用。' },
+            { name: 'グローブ・手袋', icon: '🧤', desc: '防寒、保護用。' },
+            { name: '地図とコンパス', icon: '🗺️', desc: '基本的な読図能力は重要。' },
+            { name: 'ファーストエイドキット', icon: '➕', desc: '常備薬も忘れずに。' },
+            { name: '携帯電話 & バッテリー', icon: '📱', desc: '緊急連絡用。フル充電で。' },
+            { name: 'ゴミ袋', icon: '🗑️', desc: '自分のゴミは全て持ち帰る。' },
+            { name: '健康保険証(コピー可)', icon: '📄', desc: '万が一の事態に備えて。' },
+        ],
+        climbing: [
+            { name: 'クライミングシューズ', icon: '🧗', desc: '自分の足に合ったもの。' },
+            { name: 'ハーネス', icon: '🔗', desc: '体に正しくフィットするか確認。' },
+            { name: 'ヘルメット', icon: '🪖', desc: '落石や墜落から頭部を保護。' },
+            { name: '確保器・カラビナ', icon: '⚙️', desc: 'イベント指定のものを準備。' },
+        ],
+        hiking: [
+            { name: '登山靴/トレランシューズ', icon: '👟', desc: 'アクティビティに適した履き慣れたもの。' },
+            { name: '速乾性ウェア', icon: '💨', desc: '汗冷えを防ぎ、快適性を保つ。' },
+        ],
+        snow: [
+            { name: 'アバランチギア3点セット', icon: '📡', desc: 'ビーコン、ショベル、プローブ。バックカントリーでは必携。' },
+            { name: 'スキー/スノーボード', icon: '⛷️', desc: 'シールやストックも忘れずに。' },
+            { name: 'ゴーグル・サングラス', icon: '🕶️', desc: '雪面からの強い紫外線対策。' },
+            { name: '適切なレイヤリングウェア', icon: '겹', desc: '防水アウター、保温ミッド、速乾ベース。' },
+        ],
+        recommended: [
+            { name: 'トレッキングポール', icon: '🦯', desc: 'バランス保持と負担軽減。' },
+            { name: '日焼け止め', icon: '☀️', desc: '特に雪上では必須。' },
+            { name: 'タオル・ティッシュ', icon: '🧻', desc: '何かと便利。' },
+            { name: '着替え', icon: '🧦', desc: '汗や雨雪で濡れた場合のため。' },
+            { name: 'テルモス(保温ボトル)', icon: '♨️', desc: '温かい飲み物は心と体を温める。' },
+            { name: 'ツェルト/小型タープ', icon: '⛺', desc: '緊急時のビバーク用。' },
+            { name: '修理キット', icon: '🛠️', desc: 'ダクトテープや結束バンドなど。' },
+        ],
+    };
+
+    function createGearCard(item) {
+        return `
+            <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-center h-full">
+                <span class="text-4xl mb-2">${item.icon}</span>
+                <h4 class="font-semibold text-slate-800">${item.name}</h4>
+                <p class="text-xs text-slate-500 mt-1 flex-grow">${item.desc}</p>
+            </div>
+        `;
+    }
+
+    Object.keys(gearData).forEach(key => {
+        const container = document.getElementById(key);
+        if (container) {
+            container.innerHTML = gearData[key].map(createGearCard).join('');
+        }
+    });
+
+    const filterButtons = document.querySelectorAll('.gear-filter-btn');
+    const gearLists = document.querySelectorAll('.gear-list');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.dataset.target;
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-arcteryx-orange', 'text-white');
+            });
+            button.classList.add('active', 'bg-arcteryx-orange', 'text-white');
+
+            gearLists.forEach(list => {
+                if (list.id === targetId) {
+                    list.classList.remove('hidden');
+                } else {
+                    list.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.content-section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                });
+            }
+        });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    filterButtons.forEach(button => {
+        button.style.cssText = `
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid transparent;
+        `;
+        if (!button.classList.contains('active')) {
+            button.classList.add('bg-white', 'text-slate-700', 'border-slate-300');
+        }
+    });
+
+});
+</script>
+
 </body>
 </html>
